@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sonido Vivo | Catálogo</title>
+
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+
+    <!-- Nuestro CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- JavaScript -->
+
+    <script src="js/storage.js"
+            defer>
+    </script>
+
+    <script src="js/catalogo.js"
+            defer>
+    </script>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold"
+               href="index.html">
+
+                Sonido Vivo
+
+            </a>
+
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse"
+                 id="menuPrincipal">
+
+                <div class="navbar-nav ms-auto">
+
+                    <a class="nav-link"
+                       href="index.html">
+
+                        Inicio
+
+                    </a>
+
+
+                    <a class="nav-link active"
+                       href="catalogo.html">
+
+                        Productos
+
+                    </a>
+
+
+                    <a class="nav-link"
+                       href="registro.html">
+
+                        Registrarse
+
+                    </a>
+
+
+                    <a class="nav-link"
+                       href="login.html">
+
+                        Iniciar sesión
+
+                    </a>
+
+
+                    <a class="nav-link"
+                       href="carrito.html">
+
+                        Carrito
+
+                        <span id="contadorCarrito"
+                              class="badge text-bg-warning">
+
+                            0
+
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- CONTENIDO -->
+
+    <main class="container py-5">
+
+
+        <!-- TITULO -->
+
+        <section class="mb-4">
+
+            <span class="badge text-bg-primary mb-3">
+
+                Catálogo
+
+            </span>
+
+
+            <h1 class="display-6 fw-bold">
+
+                Nuestros productos
+
+            </h1>
+
+
+            <p class="text-secondary">
+
+                Revisa nuestros instrumentos y equipos musicales.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- FILTROS -->
+
+        <section class="card shadow-sm border-0 mb-5">
+
+            <div class="card-body p-4">
+
+
+                <div class="row g-3">
+
+
+                    <!-- CATEGORIA -->
+
+                    <div class="col-md-6">
+
+                        <label for="filtroCategoria"
+                               class="form-label">
+
+                            Categoría
+
+                        </label>
+
+
+                        <select id="filtroCategoria"
+                                class="form-select">
+
+                            <option value="">
+
+                                Todas las categorías
+
+                            </option>
+
+
+                            <option value="Guitarras">
+                                Guitarras
+                            </option>
+
+
+                            <option value="Bajos">
+                                Bajos
+                            </option>
+
+
+                            <option value="Baterías">
+                                Baterías
+                            </option>
+
+
+                            <option value="Teclados">
+                                Teclados
+                            </option>
+
+
+                            <option value="Amplificadores">
+                                Amplificadores
+                            </option>
+
+
+                            <option value="Micrófonos">
+                                Micrófonos
+                            </option>
+
+
+                            <option value="Pedales">
+                                Pedales
+                            </option>
+
+
+                            <option value="Accesorios">
+                                Accesorios
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- PRECIO -->
+
+                    <div class="col-md-6">
+
+                        <label for="filtroPrecio"
+                               class="form-label">
+
+                            Precio máximo
+
+                        </label>
+
+
+                        <input type="number"
+                               class="form-control"
+                               id="filtroPrecio"
+                               placeholder="Ejemplo: 400000">
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PRODUCTOS -->
+
+        <div id="listaProductos"
+             class="row g-4">
+
+        </div>
+
+
+
+        <!-- SIN PRODUCTOS -->
+
+        <div id="sinProductos"
+             class="alert alert-light border text-center d-none">
+
+            No se encontraron productos.
+
+        </div>
+
+
+
+        <!-- MENSAJES -->
+
+        <div id="mensajeCatalogo"
+             class="alert alert-success mt-4 d-none"
+             role="alert">
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="py-4 bg-dark text-white">
+
+        <div class="container text-center">
+
+            Sonido Vivo · Nombre del equipo · DSY1104 – 2026
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>
